@@ -28,3 +28,26 @@ int** input(int n, int m)//ввод матрицы
 	}
 	return a;
 }
+
+int** input2(int n, int m, int r)//создание псевдослучайных элементов матрицы
+{
+	int i, j;
+	int** a;
+	a = (int**)malloc(m * sizeof(int*));
+	for (i = 0; i < m; i++)
+	{
+		a[i] = (int*)malloc(n * sizeof(int*));
+		for (j = 0; j < n; j++)
+		{
+			a[i][j] = 0;
+		}
+	}
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			a[i][j] = rand() % r;
+		}
+	}
+	return a;
+}
