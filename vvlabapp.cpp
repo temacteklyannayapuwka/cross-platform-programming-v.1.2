@@ -62,3 +62,26 @@ void output(int** z, int m, int n)//функция вывода матрицы
 		printf("\n");
 	}
 }
+int umnojenie(int** z, int m, int n)//умножение на число
+{
+	int i, j;
+	int number=0;
+	float otvet1;
+	cout << "Введите число, на которое нужно умножить матрицу: ";
+	cin >> number; // число
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			cin >> z[i][j];
+			z[i][j] = z[i][j] * number;
+		}
+	}
+
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			cout << z[i][j] << " \t"; // Вывести элементы на консольку
+		}
+		cout << endl; // Двумерный массив. Строка кончилась, переводим строку и на консоли
