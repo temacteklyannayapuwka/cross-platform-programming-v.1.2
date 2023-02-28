@@ -51,3 +51,14 @@ int** input2(int n, int m, int r)//создание псевдослучайны
 	}
 	return a;
 }
+void output(int** z, int m, int n)//функция вывода матрицы
+{
+	int i, j;
+	printf("Результирующая матрица:\n");
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; j < n; j++)
+			printf(" %8d", z[i][j]);
+		printf("\n");
+	}
+}
