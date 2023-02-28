@@ -142,3 +142,6 @@ int menu()//функция меню для взаимодействия с по�
 	output(p, m, n);
 
 }
+//added some trash string
+//hello
+//stavropol
